@@ -22,7 +22,18 @@
 
 #include <iostream>
 
+using std::cin;
+using std::cout;
+
 int main()
 {
+    double number;
+    while (cin >> number) {
+        // do
+        if (number >= 0) {
+            cout << number << std::endl;
+        }
+    }
+    
     return 0;
 }

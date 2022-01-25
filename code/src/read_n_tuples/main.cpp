@@ -26,8 +26,36 @@
 // HINT: use the using statement in make it shorter refererring to std::cout
 // and std::cin.
 
+using std::cin;
+using std::cout;
+
+
+
+
 int main()
 {
-    // TODO:
+    size_t n;
+    cin >> n;
+    
+    if (n == 0) {
+        cout << "NaN\n";
+        return 0;
+    }
+    
+    double total = 0;
+    for (size_t i = 0; i < n; ++i) {
+        double x;
+        double y;
+        cin >> x >> y;
+        total += std::pow(x, y);
+//        pow(x, y);
+    }
+    
+
+    total = total / n;
+    cout << total << std::endl;
+
+
+    
     return 0;
 }

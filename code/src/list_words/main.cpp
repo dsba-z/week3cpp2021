@@ -23,7 +23,21 @@ int main()
 {
     using std::cout;
     using std::cin;
+    std::string line;
+    std::string word;
+    while (cin >> line) {
+        
+        std::stringstream sstr(line);
+        while (std::getline(sstr, word, ',')) {
+            cout << word << std::endl;
+        }
+        
+        
+    }
 
+    
+    
+    
     // TODO: provide your implementation here as 2 variants:
     // 1) a straightforward approach
     // 2) an approach using stringstream

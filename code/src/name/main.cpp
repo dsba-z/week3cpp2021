@@ -24,5 +24,21 @@
 
 int main()
 {
+    // a b
+    // b, a
+    
+    // line.size()
+//    std::getline(cin, line);
+
+    // second task input
+    // a b
+    // x y
+
+    // second task output
+    // a b x y
+    // x y, a b
+    
+//    "\n"
+//    std::endl;
     return 0;
 }

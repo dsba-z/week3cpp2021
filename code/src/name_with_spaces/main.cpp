@@ -17,7 +17,18 @@
 #include <iostream>
 #include <string>
 
+using std::cin;
+using std::cout;
+
 int main()
-{    
+{
+    // std::getline(cin, line);
+    std::string line;
+    while (std::getline(cin, line)) {
+        cout << line.size() << std::endl;
+    }
     return 0;
+
 }
+
+   
