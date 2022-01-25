@@ -23,12 +23,31 @@ int main()
 {
     using std::cout;
     using std::cin;
-
+    using std::endl;
     // TODO: provide your implementation here as 2 variants:
-    // 1) a straightforward approach
+    // 1) a straightforward approach ("cin >> word" or 
     // 2) an approach using stringstream
+    //   read several lines, separate words from different lines with '====='
     
+    // 12,3,4,5
+    // 12
+    // 3
+    // 4
+    // 5
+
+    std::string word;
+    std::string line;
+    while (std::getline(cin, line, '\n')) {
+
+        std::stringstream sstr(line);
+        while (std::getline(cin, line, ',')) {
+            cout << word << endl;
+        }
+        cout << "=====" << endl;
+    }
     
+
+//    sstr >> word
     cout << "\n\n";
     return 0;
 }

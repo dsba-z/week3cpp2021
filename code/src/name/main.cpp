@@ -21,6 +21,25 @@
 #include <iostream>
 #include <string>
 
+// TASK 1 (cin)
+// input:
+// a b
+
+// output
+// a b
+// b, a
+
+// TASK 2 ( std::getline(cin, line) )
+// input:
+// a b c
+// x y
+
+// output
+// a b c x y
+// x y, a b c
+
+
+
 
 int main()
 {

@@ -11,7 +11,7 @@
 /// TASK DESCRIPTION
 ///
 /// A program reads n pairs (x, y) of real numbers, and calculates the average
-/// of the sum of all x^y.
+/// of all x^y.
 /// Input:
 ///     first line contains an integer >= 0;
 ///     next n lines contain pairs (x, y) separated by spaces.
@@ -25,9 +25,38 @@
 
 // HINT: use the using statement in make it shorter refererring to std::cout
 // and std::cin.
+using std::cin;
+using std::cout;
+using std::endl;
+
+void readNTuples(size_t n) {
+    
+    if (n == 0) {
+        cout << "NaN" << endl;
+        return;
+    }
+    
+    double total = 0;
+    for (size_t i = 0; i < n; ++i) {
+        double x;
+        double y;
+        cin >> x >> y;
+        total += std::pow(x, 2);
+        total += pow(x, 2);
+    }
+    
+
+    double average = total / n;
+    cout << average << endl;
+}
 
 int main()
 {
-    // TODO:
+    size_t n;
+    cin >> n;
+
+    readNTuples(n);
+    
+
     return 0;
 }

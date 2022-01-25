@@ -22,7 +22,23 @@
 
 #include <iostream>
 
+using std::cin;
+using std::cout;
+using std::endl;
+
 int main()
 {
+    double x;
+    while (cin >> x) {
+        // read
+        // check if reading was success
+
+        
+        // do
+        if (x >= 0) {
+            cout << x << endl;
+        }
+    }
+
     return 0;
 }
