@@ -26,7 +26,32 @@
 #include <iostream>
 #include <string>
 
+using std::string;
+using std::to_string;
+
 int main()
 {
+    int intNumber1;
+    int intNumber2;
+    int intNumber3;
+
+    std::cin >> intNumber1 >> intNumber2 >> intNumber3;
+
+    intNumber1 *= 2;
+    intNumber2 *= 2;
+    intNumber3 *= 2;
+
+    string strNumber1 = to_string(intNumber1);
+    string strNumber2 = to_string(intNumber2);
+    string strNumber3 = to_string(intNumber3);
+
+    string strComplexNumber = strNumber1 + strNumber2 + strNumber3;
+
+    double doubleComplexNumber = std::stod(strComplexNumber);
+    
+    doubleComplexNumber *= 2;
+    
+    std::cout << doubleComplexNumber;
+
     return 0;
 }
