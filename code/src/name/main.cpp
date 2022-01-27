@@ -21,6 +21,26 @@
 #include <iostream>
 #include <string>
 
+// TASK 1: cin
+// input:
+// Firstname Lastname
+
+// output:
+// Firstname Lastname
+// Lastname, Firstname
+
+
+// TASK 2: std::getline(cin, line)
+// input:
+// First Name
+// Long Last Name
+
+// output:
+// First Name Long Last Name
+// Long Last Name, First Name
+
+
+
 
 int main()
 {

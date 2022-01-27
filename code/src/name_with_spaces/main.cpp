@@ -14,10 +14,30 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 
+// name\nsecond_name\n
+//#include <iostream>
+//#include <string>
+
+
+
 #include <iostream>
-#include <string>
 
 int main()
-{    
+{
+    int i = 0;
+    std::string line, name, second_name;
+    std::getline(std::cin, line);
+    while (line[i] != ' ')
+    {
+        name += line[i];
+        i += 1;
+    }
+    i += 1;
+    while (line[i] != '\0')
+    {
+        second_name += line[i];
+        i += 1;
+    }
+    std::cout << second_name << "," << " " << name;
     return 0;
 }

@@ -23,6 +23,55 @@ int main()
 {
     using std::cout;
     using std::cin;
+    
+    
+
+    
+    std::string line;
+    std::getline(cin, line);
+    
+    std::stringstream sstr(line);
+    
+   
+    std::string word;
+    
+//    thing in A
+//    thing
+//    for (int i = 0; i < A.size(); ++i) {
+//        if (thing == A[i]) {
+//            found
+//        }
+//    }
+    while (std::getline(cin, line)) {
+
+        std::stringstream sstr(line);
+        while (sstr >> word) {
+            cout << word << std::endl;
+        }
+    }
+    
+    
+    
+    while (cin >> word) {
+        cout << word << std::endl;
+    }
+
+    
+    // TASK 3:
+    // input:
+    // long list of words
+    // more words
+    
+    // output:
+    // long
+    // list
+    // of
+    // words
+    // =====
+    // more
+    // words
+    
+    
 
     // TODO: provide your implementation here as 2 variants:
     // 1) a straightforward approach

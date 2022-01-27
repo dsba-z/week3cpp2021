@@ -22,7 +22,27 @@
 
 #include <iostream>
 
+using std::cin;
+using std::cout;
+using std::endl;
+
+
 int main()
 {
+    double x;
+    while (cin >> x) {
+        
+        // read
+        // cin >> x;
+        
+        // check that you read correctly
+        // if(cin)
+        
+        // do things
+        if (x >= 0) {
+            cout << x << endl;
+        }
+    }
+
     return 0;
 }
