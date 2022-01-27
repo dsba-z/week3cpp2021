@@ -31,9 +31,58 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
-#include <string>           // изначально нет
-
+#include <string>
+#include <sstream>
 int main()
 {
+    std::string exString = "1000.6";
+    int exInt = std::stoi(exString);
+    double exDouble = std::stod(exString);
+    
+    std::cout << exInt * 2 << "\n";
+    std::cout << exDouble * 2 << "\n";
+    
+    
+    int exInt2 = 50;
+    double exDouble2 = 50.125215;
+    std::string exStringInt = std::to_string(exInt2);
+    std::string exStringDouble = std::to_string(exDouble2);
+    
+    std::string together = exStringDouble + exStringInt;
+    
+    std::cout << together << "\n";
+    
+    ////////////////////////
+    
+    
+    std::string line = "1000.6";
+//    std::stringstream sstr(line);
+//    std::stringstream sstr("1000.6");
+    
+    std::stringstream sstr;
+    sstr << line;
+    
+    double number;
+    sstr >> number;
+    std::cout << number * 3 << "\n";
+    
+    
+    
+    
+    std::stringstream sstr2;
+    
+    double number2 = 963.21512;
+    sstr2 << number2;
+    
+    std::string buffer;
+    sstr2 >> buffer;
+    
+    std::cout << buffer + "___" << "\n";
+    
+    sstr2.clear();
+    sstr2 << "124";
+    sstr2 >> buffer;
+    std::cout << buffer + "___" << "\n";
+    
     return 0;
 }

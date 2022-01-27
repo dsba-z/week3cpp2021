@@ -30,6 +30,15 @@
 // TODO: Provide a declaration (a prototype) of the method calcSumFromStream() here.
 
 // TODO: Provide a definition of the method sumLines() here.
+double sumLines(std::istream& in)
+{
+    double totalSum = 0;
+    while (in) 
+    {
+        totalSum += calcSumFromStream(in);
+    }
+    
+}
 
 int main()
 {

@@ -21,12 +21,35 @@
 /// numbers hold the correct values.
 ///
 ////////////////////////////////////////////////////////////////////////////////
-
-
 #include <iostream>
 #include <string>
+#include <sstream>
 
 int main()
 {
+    int a;
+    int b;
+    int c;
+
+    std::cin >> a;
+    std::cin >> b;
+    std::cin >> c;
+
+    a *= 2;
+    b *= 2;
+    c *= 2;
+
+    std::stringstream sstr;
+    sstr << a;
+    sstr << b;
+    sstr << c;
+
+    std::string answer;
+    sstr >> answer;
+    std::cout << answer << std::endl;
+
+    int result = stoi(answer);
+    std::cout << result*2;
+
     return 0;
 }

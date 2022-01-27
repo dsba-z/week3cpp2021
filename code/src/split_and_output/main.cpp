@@ -18,24 +18,66 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-
+using namespace std;
 // TODO: Implement splitAndOutput() method here.
-void splitAndOutput(const std::string& str, char delimiter)
-{
+void splitAndOutput(const std::string& str, char delimiter){
+    stringstream sstr;
+    sstr << str;
+    string word;
+    while(std::getline(sstr,word,delimiter)){
+      cout << word << endl;
+    }
 
 }
-
 
 int main()
 {
-    using std::cout;
-    using std::cin;
-
-    // TODO: Check if the function splitAndOutput works correctly
-    // Input a string with characters separated by a delimiter
-    // Input the delimiter character
-    // Call splitAndOutput
-    
-    cout << "\n\n";
-    return 0;
+    char delimetre = ',';
+    string words;
+    std::getline(cin,words);
+    cin >> delimetre;
+    splitAndOutput(words,delimetre);
 }
+int main2()
+{
+    
+    string words;
+    cin >> words;
+    string word;
+    stringstream sstr;
+    sstr << words;
+    char comma = ',';
+    while(std::getline(sstr,word,comma)){
+      cout << word << endl;
+    }
+}
+//int main()
+//{
+//    using std::cout;
+//    using std::cin;
+
+
+//    // TODO: Check if the function splitAndOutput works correctly
+//    // Input a string with characters separated by a delimiter
+//    // Input the delimiter character
+//    // Call splitAndOutput
+    
+//    // input:
+//    // 1,2,4,2335.646,asasf,+++
+//    // ,
+    
+//    // output:
+//    // 1
+//    // 2
+//    // 4
+//    // 2335.646
+//    // asasf
+//    // +++
+//    std::string s;
+//    char delim;
+//    std::getline(cin, s);
+//    std::cin >> delim;
+//    splitAndOutput(s, delim);
+//    cout << "\n\n";
+//    return 0;
+//}
