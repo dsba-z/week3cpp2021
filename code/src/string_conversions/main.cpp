@@ -31,9 +31,37 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
-#include <string>           // изначально нет
+#include <string>
+#include <sstream>
+
+using std::string;
 
 int main()
 {
+    string example = "123dsfhsdfh";
+    int number;
+    number = std::stoi(example);
+    std::cout << number + 321 << '\n';
+    
+
+    // 123 as int
+    string fromNumber = std::to_string(123);
+    // 123 as string
+    fromNumber = fromNumber + "1111";
+    // 1231111 as string
+    
+    
+    std::stringstream sstr(fromNumber);
+    // 1231111 as stringstream
+
+    int number2;
+    sstr >> number2;
+    // 1231111 as int
+    
+    // 1231432 as int
+    std::cout << number2 + 321 << '\n';
+    
+    
     return 0;
 }
+

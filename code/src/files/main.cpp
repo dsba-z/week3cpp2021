@@ -30,6 +30,14 @@
 // TODO: Provide a declaration (a prototype) of the method calcSumFromStream() here.
 
 // TODO: Provide a definition of the method sumLines() here.
+//void sumLines()
+//{
+//    while(in)
+//    {
+//        total += calcSumFromStream(in);
+//    }
+    
+//}
 
 int main()
 {

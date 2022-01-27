@@ -14,15 +14,51 @@
 /// 
 ////////////////////////////////////////////////////////////////////////////////
 
-
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <vector>
 
-// TODO: Implement splitAndOutput() method here.
 void splitAndOutput(const std::string& str, char delimiter)
 {
+    std::vector<std::string> otpt2;
+    std::stringstream sstr(str);
+    std::string line;
+    while (std::getline(sstr, line, delimiter))
+    {
+        
+    }
+    
+    std::string otpt[2000];
+    std::string current = "";
+    int j = 0;
+    for (int i = 0; i < str.size(); ++i) // parse input
+    {
+        if (str[i] == delimiter)
+        {
+//            otpt2.push_back(current);
+            otpt[j] = current;
+            ++j;
+            current = "";
+        }
+        else
+        {
+            current = current + str[i];
+            if (i == str.size() - 1)
+            {
+                otpt[j] = current;
+                ++j;
+            }
+        }
+    }
 
+
+    for (int i = 0; i <= j; ++i)
+    {
+        //v.append(otpt[i])
+//        v.push_back(otpt[i]);
+        std::cout << otpt[i] << std::endl;
+    }
 }
 
 
@@ -31,10 +67,12 @@ int main()
     using std::cout;
     using std::cin;
 
-    // TODO: Check if the function splitAndOutput works correctly
-    // Input a string with characters separated by a delimiter
-    // Input the delimiter character
-    // Call splitAndOutput
+    std::string inpt = "";
+    char delim;
+    cin >> inpt;
+    cin >> delim;
+    splitAndOutput(inpt, delim);
+
     
     cout << "\n\n";
     return 0;

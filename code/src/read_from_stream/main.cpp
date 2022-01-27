@@ -18,19 +18,32 @@
 
 #include <iostream>
 #include <string>
+#include <cstring>
+#include <vector>
 #include <sstream>
 
-using std::cout;
-using std::cin;
-
-
-// TODO: Provide a declaration (a prototype) of the method calcSumFromStream() here.
-
+double calcSumFromStream(std::istream& in);
 
 int main()
 {
+    using namespace std;
     // TODO: Implement the main method here.
+    double totalSum = calcSumFromStream(cin);
+    std::cout << totalSum << "\n";
     return 0;
 }
 
 // TODO: Implement calcSumFromStream() method here.
+double calcSumFromStream(std::istream& in)
+{
+    double a = 0;
+    std::string line;
+    std::getline(in, line);
+    double newNumber;
+    std::stringstream sstr(line);
+    
+    while (sstr >> newNumber) {
+        a += newNumber;
+    }
+    return a;
+}
