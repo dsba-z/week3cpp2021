@@ -24,17 +24,52 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <fstream>
 #include <string>
+#include <sstream>
 
+double calcSumFromStream(std::istream& in);
 
-// TODO: Provide a declaration (a prototype) of the method calcSumFromStream() here.
-
-// TODO: Provide a definition of the method sumLines() here.
+void sumLines(std::istream& in, std::ostream& out)
+{
+    double total = 0;
+    while (in) {
+        total = calcSumFromStream(in);
+        out << total << "\n";
+    }
+}
 
 int main()
 {
+//    std::ifstream inFile("..\\..\\data\\problem8_files\\inp.txt");  - Windows
 
+    std::ifstream inFile("../../data/problem8_files/inp.txt");
+    if (!inFile.is_open())
+    {
+        std::cout << "Unable to open input file\n";
+        return 1;
+    }
+    std::ofstream outFile("../../data/problem8_files/my_out.txt");
+    if (!outFile.is_open()) 
+    {
+        std::cout << "Unable to open file\n";
+        return 1;
+    }
+    sumLines(inFile, outFile);
     return 0;
 }
 
-// TODO: Implement calcSumFromStream() method here.
+double calcSumFromStream(std::istream& in)
+{
+    double total = 0;
+    std::string line;
+    std::getline(in, line);
+    //loop
+    std::string word;
+    std::stringstream sstr(line);
+    while (sstr >> word) {
+        double number = stod(word);
+        total += number;
+    }
+    return total;
+}

@@ -50,6 +50,17 @@ int main()
     string fromNumbers = std::to_string(numberInt);
     string fromNumbers2 = std::to_string(numberDouble);
     
+    
+    // [ ####### ] [ ##### ]
+    // [ ############### ]
+    // [ ############### #####]
+    // [ ############### ##### #####]
+    // [ ############### ##### ##### #####]
+    
+    
+    // [ ####### ] [ ##### ]
+    // [ ############### ##### ##### ##### #####]
+    
     string together = fromNumbers2 + fromNumbers;
     
     std::cout << together << "\n";
@@ -76,9 +87,16 @@ int main()
     
     std::stringstream sstr2;
     // 1.0104225 as number
-    double numberToStream = 1.0104225;
+    std::string string1 = "sometext";
+    std::string string2 = "moretext";
     
-    sstr2 << numberToStream;
+    sstr2 << string1;
+    sstr2 << string2;
+//    double numberToStream = 1.0104225;
+    
+    
+    
+//    sstr2 << numberToStream;
     
     string buffer;
     // 1.0104225 as string

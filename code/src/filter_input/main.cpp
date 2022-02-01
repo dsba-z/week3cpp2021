@@ -21,14 +21,23 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <fstream>
 
 using std::cin;
 using std::cout;
 
 int main()
 {
+    
+//    std::ifstream myInputFileStream("input.txt");
+    std::ifstream in("../../data/filter_input/input.txt");
+    if (!in.is_open()) {
+        std::cout << "Unable to open file\n";
+        return 1;
+    }
+    
     double number;
-    while (cin >> number) {
+    while (in >> number) {
         // do
         if (number >= 0) {
             cout << number << std::endl;
