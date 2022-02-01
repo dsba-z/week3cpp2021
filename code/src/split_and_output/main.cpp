@@ -38,19 +38,19 @@ int main()
     cin >> delimetre;
     splitAndOutput(words,delimetre);
 }
-int main2()
-{
+//int main2()
+//{
     
-    string words;
-    cin >> words;
-    string word;
-    stringstream sstr;
-    sstr << words;
-    char comma = ',';
-    while(std::getline(sstr,word,comma)){
-      cout << word << endl;
-    }
-}
+//    string words;
+//    cin >> words;
+//    string word;
+//    stringstream sstr;
+//    sstr << words;
+//    char comma = ',';
+//    while(std::getline(sstr,word,comma)){
+//      cout << word << endl;
+//    }
+//}
 //int main()
 //{
 //    using std::cout;

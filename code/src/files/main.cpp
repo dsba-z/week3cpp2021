@@ -24,26 +24,56 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <sstream>
+#include <fstream>
 #include <string>
 
+double calcSumFromStream(std::istream& in);
 
-// TODO: Provide a declaration (a prototype) of the method calcSumFromStream() here.
-
-// TODO: Provide a definition of the method sumLines() here.
-double sumLines(std::istream& in)
+void sumLines(std::istream& in, std::ostream& out)
 {
-    double totalSum = 0;
-    while (in) 
+    while (in)
     {
-        totalSum += calcSumFromStream(in);
+        std::cout << calcSumFromStream(in) << "\n";
     }
-    
 }
 
 int main()
 {
-
+    // Windows:
+    // std::ifstream inFile("..\\..\\data\\problem8_files\\inp.txt");
+    // C:\\Program Files\\QT\\...
+    
+    std::ifstream inFile("../../../data/problem8_files/inp.txt");
+    if (!inFile.is_open()) {
+        std::cout << "Unable to open input file" << std::endl;
+        return 1;
+    }
+    
+    std::ofstream outFile("../../data/problem8_files/my_out.txt");
+    if (!outFile.is_open()) {
+        std::cout << "Unable to open output file" << std::endl;
+        return 1;
+    }
+    
+    sumLines(inFile, outFile);
+    inFile.close();
+    outFile.close();
     return 0;
 }
 
 // TODO: Implement calcSumFromStream() method here.
+double calcSumFromStream(std::istream& in)
+{
+    double total = 0;
+    std::string line;
+    std::getline(in, line);
+    
+    std::stringstream sstr(line);
+    double number;
+    while (sstr >> number) {
+        total += number;
+    }
+    return total;
+}
+

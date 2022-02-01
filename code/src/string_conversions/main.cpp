@@ -49,7 +49,23 @@ int main()
     std::string exStringDouble = std::to_string(exDouble2);
     
     std::string together = exStringDouble + exStringInt;
+    together = together + exStringInt;
+    together = together + exStringInt;
+    together = together + exStringInt;
+    together = together + exStringInt;
+    together = together + exStringInt;
+    together = together + exStringInt;
     
+    // [ #### ] + [ #### ] + [ ###### ]
+    // [ ####  #### ]
+    // [ ####  ####  ###### ]
+    // [ ####  ####  ######  ###### ]
+    // [ ####  ####  ######  ######  ###### ]
+    
+    
+    // [ #### ] << [ #### ] << [ ###### ]
+    // [ ####  ####  ######  ###### ]
+
     std::cout << together << "\n";
     
     ////////////////////////
@@ -62,6 +78,7 @@ int main()
     std::stringstream sstr;
     sstr << line;
     
+    std::string fullBuffer = sstr.str();
     double number;
     sstr >> number;
     std::cout << number * 3 << "\n";

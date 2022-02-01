@@ -42,7 +42,9 @@ int main()
 //            found
 //        }
 //    }
-    while (std::getline(cin, line)) {
+    std::string a = "123";
+    a[1] == ' ';
+    while (std::getline(cin, line, ' ')) {
 
         std::stringstream sstr(line);
         while (sstr >> word) {

@@ -21,6 +21,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <fstream>
 
 using std::cin;
 using std::cout;
@@ -30,19 +31,21 @@ using std::endl;
 int main()
 {
     double x;
-    while (cin >> x) {
-        
-        // read
-        // cin >> x;
-        
-        // check that you read correctly
-        // if(cin)
-        
-        // do things
+    
+    std::ifstream inFile("inp2t.txt");
+    
+    if (!inFile.is_open()) {
+        std::cout << "Unable to open file" << std::endl;
+        return 1;
+    }
+    
+    while (inFile >> x) {
+
         if (x >= 0) {
             cout << x << endl;
         }
     }
+    inFile.close();
 
     return 0;
 }

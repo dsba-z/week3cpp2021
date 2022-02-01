@@ -27,13 +27,13 @@ using std::cin;
 // TODO: Provide a declaration (a prototype) of the method calcSumFromStream() here.
 double calcSumFromStream(std::istream& in);
 
+//void solution();
+
 
 
 int main()
 {
-    // TODO: Implement the main method here.
-    double total = calcSumFromStream(cin);
-    cout << total << "\n";
+//    solution();
     return 0;
 }
 
@@ -49,4 +49,5 @@ double calcSumFromStream(std::istream& in)
     while (sstr >> number) {
         total += number;
     }
+    return total;
 }
