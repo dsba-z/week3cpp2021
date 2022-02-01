@@ -37,10 +37,10 @@ int main()
 
     std::string word;
     std::string line;
-    while (std::getline(cin, line, '\n')) {
+    while (std::getline(cin, line)) {
 
         std::stringstream sstr(line);
-        while (std::getline(cin, line, ',')) {
+        while (std::getline(sstr, word, ',')) {
             cout << word << endl;
         }
         cout << "=====" << endl;

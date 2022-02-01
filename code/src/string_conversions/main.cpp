@@ -49,11 +49,24 @@ int main()
     // 123 as string
     fromNumber = fromNumber + "1111";
     // 1231111 as string
+    fromNumber = fromNumber + "1111";
+    fromNumber = fromNumber + "1111";
+    fromNumber = fromNumber + "1111";
+    
+    // [ #### ] [ #### ]
+    // [ ####  #### ]
+    // [ ####  ####  #### ]
+    // [ ####  ####  ####  #### ]
+    // [ ####  ####  ####  ####  #### ]
+    
+    
+    // [ #### ] << [ #### ] << [ #### ]
+    // [ ####  ####  ####  ####  #### ]
     
     
     std::stringstream sstr(fromNumber);
     // 1231111 as stringstream
-
+    
     int number2;
     sstr >> number2;
     // 1231111 as int

@@ -21,6 +21,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <fstream>
 
 using std::cin;
 using std::cout;
@@ -28,8 +29,15 @@ using std::endl;
 
 int main()
 {
+//    std::fstream inFile("..\\..\\data\\filter_input\\input.txt");
+    std::fstream inFile("../../data/filter_input/input.txt");
+    if (!inFile.is_open()) {
+        std::cout << "Unable to open file\n";
+        return 1;
+    }
+    
     double x;
-    while (cin >> x) {
+    while (inFile >> x) {
         // read
         // check if reading was success
 
